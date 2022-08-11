@@ -1,5 +1,4 @@
-
-.home-background{
+.home-background {
     width: 100%;
     background-color: white;
     display: flex;
@@ -7,26 +6,47 @@
     position: relative;
 }
 
-.home-section-main{
+.home-section-main {
     width: 100%;
-    img{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    img {
         width: 100%;
-        height: 100vh;
+        height: 60vh;
+    }
+    button{
+        position: absolute;
+        top: 30%;
+    }
+    div {
+        width: 100%;
+        position: absolute;
+        top: 60%;
+        display: flex;
+        justify-content: center;
+
+        p {
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: white;
+        }
     }
 }
 
-.home-section-block{
+.home-section-block {
     width: 100%;
     display: flex;
     flex-direction: column;
-    
+
 }
 
-.home-section-block-reverse{
+.home-section-block-reverse {
     flex-direction: column-reverse;
 }
 
-.home-section{
+.home-section {
     display: flex;
     width: 100%;
     height: 500px;
@@ -35,12 +55,12 @@
     flex-direction: column;
 }
 
-.home-image{
+.home-image {
     width: 100%;
     height: 700px;
 }
 
-.home-instagram{
+.home-instagram {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -48,90 +68,104 @@
     flex-direction: column;
     padding-top: 80px;
     padding-bottom: 80px;
-    p{
+
+    p {
         margin: 5px;
     }
 }
 
-.home-instagram .tag{
+.home-instagram .tag {
     font-size: 2.5rem;
 }
 
-.home-instagram .instagram{
+.home-instagram .instagram {
     font-size: 1rem;
     color: #BDBDBD;
 }
 
-.home-input{
+.home-input {
     padding-top: 20px;
     width: 70%;
 }
 
-.home-collage{
+.home-collage {
     display: flex;
     width: 100%;
     justify-content: center;
 }
 
-.home-collage-photos{
+.home-collage-photos {
     display: grid;
     grid-template-columns: repeat(2, 50%);
     grid-gap: 10px;
-    img{
+
+    img {
         width: 150px;
         height: 150px;
-    }   
+    }
 }
 
-.home-input-error{
+.home-input-error {
     color: red;
     font-size: small;
 }
 
 
 @media only screen and (min-width: 600px) {
-    .home-section-block{
+    .home-section-block {
         width: 100%;
         display: flex;
         flex-direction: row;
     }
-    
-    .home-section-block-reverse{
+
+    .home-section-block-reverse {
         flex-direction: row;
     }
 
-    .home-section{
+    .home-section {
         height: 350px;
     }
 
-    .home-image{
+    .home-image {
         width: 100%;
-        height:  350px;
-    } 
+        height: 350px;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 
-    .home-section{
+    .home-section {
         height: 500px;
     }
 
-    .home-image{
+    .home-image {
         width: 100%;
         height: 500px;
-    } 
-   
-    .home-collage-photos{
+    }
+
+    .home-collage-photos {
         grid-template-columns: repeat(3, 1fr);
-        img{
+
+        img {
             width: 250px;
             height: 250px;
         }
     }
 
-    .home-input{
+    .home-input {
         width: 60%;
     }
-}
 
+    .home-section-main {
+        img {
+            height: 100vh;
+        }
+
+        div {
+            p {
+                font-size: 3.5rem;
+            }
+        }
+    }
+}

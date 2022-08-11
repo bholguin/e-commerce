@@ -1,4 +1,9 @@
 import { FC } from "react";
+import { useForm } from "react-hook-form"
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+//Images
 import ImgPuff from "../../assets/puff.webp"
 import ImgPuffPhoto from "../../assets/puff-photo.webp"
 import ImgUmbrellaPeople from "../../assets/umbrella-people.jpg"
@@ -10,12 +15,13 @@ import ImgNap from "../../assets/nap.webp"
 import ImgPool from "../../assets/pool.jpg"
 import ImgPoolPeople from "../../assets/pool-people.jpg"
 import ImgMain from "../../assets/main.jpg"
-
+//Components
 import { DetailProduct } from "../../components/DetailProduct";
-import { useForm } from "react-hook-form"
+
 import { EmailInput } from "../../components/Input"
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
+import { Button } from "../../components/Button";
 
 const useHome = () => {
 
@@ -36,6 +42,9 @@ const useHome = () => {
             })
             const response = await res.json()
             if (response.ok) {
+                toast.success("Gracias por conectar con nosotros !", {
+                    position: toast.POSITION.BOTTOM_RIGHT
+                });
                 reset({ email: "" })
             }
         } catch (e: any) {
@@ -66,19 +75,25 @@ export const Home: FC = (): JSX.Element => {
 
     return (<div className="home-background">
         <Header />
+        <ToastContainer />
+       
         <div className="home-section-main">
-            <img src={ImgMain} alt="main"/>
+            <Button >SHOP</Button>
+        <div className="home-text">
+            <p>ESTÁR CÓMODO,<br/> NUNCA FUE TAN FÁCIL</p>
+        </div>
+            <img src={ImgMain} alt="main" />
         </div>
         <div className="home-section-block home-section-block-reverse">
             <div className="home-section">
                 <img src={ImgUmbrellaPeople} alt="imagen" className="home-image" />
             </div>
             <div className="home-section">
-              <DetailProduct
+                <DetailProduct
                     imgSrc={ImgUmbrella}
                     title="Pufi RAIN"
                     subtitle="Descripción del producto. Este es un texto simulado"
-                /> 
+                />
             </div>
         </div>
         <div className="home-section-block">
@@ -98,11 +113,11 @@ export const Home: FC = (): JSX.Element => {
                 <img src={ImgBagPeople} alt="imagen" className="home-image" />
             </div>
             <div className="home-section">
-               <DetailProduct
+                <DetailProduct
                     imgSrc={ImgBag}
                     title="Pufi CART"
                     subtitle="Descripción del producto. Este es un texto simulado"
-                /> 
+                />
             </div>
         </div>
         <div className="home-section-block">
@@ -123,14 +138,14 @@ export const Home: FC = (): JSX.Element => {
         </div>
         <div className="home-collage">
             <div className="home-collage-photos">
-            <img src={ImgPool} alt="imagen" />
-            <img src={ImgUmbrellaPeople} alt="imagen" />
-            <img src={ImgPuff} alt="imagen" />
-            <img src={ImgBagPeople} alt="imagen" />
-            <img src={ImgNapPeople} alt="imagen" />
-            <img src={ImgPoolPeople} alt="imagen" />
+                <img src={ImgPool} alt="imagen" />
+                <img src={ImgUmbrellaPeople} alt="imagen" />
+                <img src={ImgPuff} alt="imagen" />
+                <img src={ImgBagPeople} alt="imagen" />
+                <img src={ImgNapPeople} alt="imagen" />
+                <img src={ImgPoolPeople} alt="imagen" />
             </div>
-            
+
         </div>
         <div className="home-instagram">
             <p className="instagram">NEWSLETTER</p>
@@ -143,7 +158,7 @@ export const Home: FC = (): JSX.Element => {
                 </form>
             </div>
         </div>
-        <Footer /> 
+        <Footer />
     </div>)
 }
 

@@ -11,10 +11,10 @@ export const Header: FC = (): JSX.Element => {
     const handleHeader = () => {
         if (window.scrollY > 50) {
             headerRef.current.classList.remove('header-content');
-            headerRef.current.classList.add('header-content-stiky');
+            headerRef.current.classList.add('header-content-fixed');
         }
         else {
-            headerRef.current.classList.remove('header-content-stiky');
+            headerRef.current.classList.remove('header-content-fixed');
             headerRef.current.classList.add('header-content');
         }
     }
