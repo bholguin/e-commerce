@@ -1,8 +1,10 @@
 import { FC } from "react";
 import { useForm } from "react-hook-form"
+import Slider from "react-slick";
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 //Images
 import ImgPuff from "../../assets/puff.webp"
 import ImgPuffPhoto from "../../assets/puff-photo.webp"
@@ -76,14 +78,23 @@ export const Home: FC = (): JSX.Element => {
     return (<div className="home-background">
         <Header />
         <ToastContainer />
-       
         <div className="home-section-main">
+                <p>ESTÁR CÓMODO,<br /> NUNCA FUE TAN FÁCIL</p>
+        </div>
+        <div className="button-shop">
             <Button >SHOP</Button>
-        <div className="home-text">
-            <p>ESTÁR CÓMODO,<br/> NUNCA FUE TAN FÁCIL</p>
         </div>
-            <img src={ImgMain} alt="main" />
-        </div>
+        <Slider dots speed={500} slidesToShow={1} slidesToScroll={1} className="slick-custom">
+            <div>
+                <img src={ImgPool} alt="imagen" style={{ width: "100%", height: "100vh" }} />
+            </div>
+            <div>
+                <img src={ImgMain} alt="main" style={{ width: "100%", height: "100vh" }} />
+            </div>
+            <div>
+                <img src={ImgPoolPeople} alt="imagen" style={{ width: "100%", height: "100vh" }} />
+            </div>
+        </Slider>
         <div className="home-section-block home-section-block-reverse">
             <div className="home-section">
                 <img src={ImgUmbrellaPeople} alt="imagen" className="home-image" />
@@ -145,7 +156,6 @@ export const Home: FC = (): JSX.Element => {
                 <img src={ImgNapPeople} alt="imagen" />
                 <img src={ImgPoolPeople} alt="imagen" />
             </div>
-
         </div>
         <div className="home-instagram">
             <p className="instagram">NEWSLETTER</p>

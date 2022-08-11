@@ -3,7 +3,7 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    z-index: 1000;
+    z-index: 2000;
     background-color: #757575;
 }
 
@@ -15,7 +15,7 @@
     background-color: #757575;
     display: flex;
     flex-direction: row;
-    z-index: 1000;
+    z-index: 2000;
 }
 
 .header-logo-content {
@@ -45,7 +45,7 @@
     flex-direction: column;
     width: 100%;
     top:65px;
-   
+    z-index: 2000;
     p{
         font-weight: 600;
         padding-left: 20px;
