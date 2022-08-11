@@ -1,0 +1,167 @@
+.header-content {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #757575;
+}
+
+.header-content-stiky {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #757575;
+    display: flex;
+    flex-direction: row;
+    z-index: 1000;
+}
+
+.header-logo-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    width: 40%;
+    padding: 20px;
+    p {
+        color: white;
+        font-size: 2rem;
+        font-weight: 600;
+        margin-left: 0;
+        margin: 0;
+    }
+    img{
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.header-options-content {
+    display: none;
+    position: absolute;
+    background-color: #757575;
+    flex-direction: column;
+    width: 100%;
+    top:65px;
+   
+    p{
+        font-weight: 600;
+        padding-left: 20px;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+.header-acount-content {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    p {
+        color: white;
+        font-size: 0.8rem;
+        cursor: pointer;
+    }
+    span {
+        height: 50%;
+        width: 1px;
+        background-color: white;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    .header-content { 
+        background-color: transparent;
+    }
+
+    .header-logo-content {
+        width: 20%;
+        img{
+            display: none;
+        }
+    }
+
+    .header-acount-content {
+        display: flex;
+    }
+
+    .header-options-content {
+        width: 60%;
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: static;
+        gap: 20px;
+        background-color: transparent;
+        p {
+            font-size: 0.9rem;
+            
+            padding: 0;
+        }
+
+        span {
+            height: 50%;
+            width: 1px;
+            background-color: white;
+        }
+    }
+
+    .header-acount-content {
+        width: 20%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+
+        p {
+            color: white;
+            font-size: 0.8rem;
+        }
+
+        span {
+            height: 50%;
+            width: 1px;
+            background-color: white;
+        }
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+
+    .header-content { 
+        background-color: transparent;
+    }
+
+    .header-logo-content {
+        p {
+            color: white;
+            font-size: 3rem;
+            font-weight: 600;
+            margin-left: 0;
+            margin: 0;
+        }
+    }
+
+    .header-options-content {
+        p {
+            font-size: 1.2rem;
+        }
+    }
+
+    .header-acount-content {
+        p {
+            color: white;
+            font-size: 0.9rem;
+        }
+    }
+
+}

@@ -9,12 +9,13 @@ import ImgNapPeople from "../../assets/nap-people.webp"
 import ImgNap from "../../assets/nap.webp"
 import ImgPool from "../../assets/pool.jpg"
 import ImgPoolPeople from "../../assets/pool-people.jpg"
-
+import ImgMain from "../../assets/main.jpg"
 
 import { DetailProduct } from "../../components/DetailProduct";
 import { useForm } from "react-hook-form"
 import { EmailInput } from "../../components/Input"
 import { Footer } from "../../components/Footer";
+import { Header } from "../../components/Header";
 
 const useHome = () => {
 
@@ -64,6 +65,10 @@ export const Home: FC = (): JSX.Element => {
 
 
     return (<div className="home-background">
+        <Header />
+        <div className="home-section-main">
+            <img src={ImgMain} alt="main"/>
+        </div>
         <div className="home-section-block home-section-block-reverse">
             <div className="home-section">
                 <img src={ImgUmbrellaPeople} alt="imagen" className="home-image" />
