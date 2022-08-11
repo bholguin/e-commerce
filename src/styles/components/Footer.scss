@@ -1,0 +1,161 @@
+.footer-container{
+    width: 100%;
+    display: flex;
+    //justify-content: center;
+    flex-direction: column;
+    //align-items: center;
+    box-shadow:  0 0 10px #BDBDBD;
+}
+
+.footer-section{
+    width: 100%;
+    display: flex;
+    gap:0px;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0px;
+}
+
+.footer-copy{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    p{
+        font-size: 0.8rem;
+        color: #BDBDBD;
+    }
+    hr{
+        color: #BDBDBD;
+        width: 90%;
+    }
+}
+
+.footer-info-content{
+    width:80%;
+    height: 152px;
+    p{
+        font-weight: 600;
+        cursor: pointer;
+    }
+}
+
+.footer-info-content-line{
+    width:80%;
+    padding-bottom: 30px;
+    position: relative;
+    height: 152px;
+    p{
+        font-weight: 600;
+        cursor: pointer;
+    }
+}
+
+.footer-info-content-line::after{
+    content: '';
+    border-bottom: 1px solid #BDBDBD;
+    position: absolute;
+    width: 100%;
+    padding: 5px;
+}
+
+.footer-sure-section{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding-top: 10px;
+    img{
+        width: 60px;
+    }
+}
+
+
+.footer-social-network-icons{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    img{
+        width: 30px;
+        padding: 5px;
+        cursor: pointer;
+    }
+}
+
+.footer-social-network{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.footer-logo{
+    font-size: 3rem;
+    font-weight: 600;
+    margin-left: 0;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+ 
+    
+
+    .footer-logo{
+        padding-left: 30px
+    }
+
+    .footer-section{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap:13px;
+        padding-top: 30px;
+    }
+    
+    .footer-info-content{
+        width:20%;
+        p{
+            font-weight: 600;
+        }
+    }
+    
+    .footer-info-content-line{
+        width:20%;
+        //padding: 30px;
+        padding-bottom: 0px;
+        position: relative;
+        p{
+            font-weight: 600;
+            cursor: pointer;
+        }
+    }
+    
+    .footer-info-content-line::after{
+        content: '';
+        border-right: 1px solid #BDBDBD;
+        border-bottom: 0px;
+        height: 70%;
+        width: 0%;
+        padding: 0px;
+        top: 25%;
+        right: 0;
+    }
+
+    .footer-copy{
+        width: 100%;
+        display: flex;
+        margin-top: 10px;
+        align-items: flex-start;
+        p{
+            padding-left: 30px;
+            font-size: 1rem;
+        }
+        hr{
+            width: 95%;
+        }
+    }
+
+}
+

@@ -1,0 +1,130 @@
+
+.home-background{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.home-section-block{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.home-section-block-reverse{
+    flex-direction: column-reverse;
+}
+
+.home-section{
+    display: flex;
+    width: 100%;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home-image{
+    width: 100%;
+    height: 700px;
+}
+
+.home-instagram{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    p{
+        margin: 5px;
+    }
+}
+
+.home-instagram .tag{
+    font-size: 2.5rem;
+}
+
+.home-instagram .instagram{
+    font-size: 1rem;
+    color: #BDBDBD;
+}
+
+.home-input{
+    padding-top: 20px;
+    width: 70%;
+}
+
+.home-collage{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.home-collage-photos{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-gap: 10px;
+    img{
+        width: 150px;
+        height: 150px;
+    }   
+}
+
+.home-input-error{
+    color: red;
+    font-size: small;
+}
+
+
+@media only screen and (min-width: 600px) {
+    .home-section-block{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        
+    }
+    
+    .home-section-block-reverse{
+        flex-direction: row;
+    }
+
+    .home-section{
+        height: 350px;
+    }
+
+    .home-image{
+        width: 100%;
+        height:  350px;
+    } 
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+    .home-section{
+        height: 500px;
+    }
+
+    .home-image{
+        width: 100%;
+        height: 500px;
+    } 
+   
+    .home-collage-photos{
+        grid-template-columns: repeat(3, 1fr);
+        img{
+            width: 250px;
+            height: 250px;
+        }
+    }
+
+    .home-input{
+        width: 60%;
+    }
+}
+

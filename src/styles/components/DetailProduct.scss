@@ -1,0 +1,45 @@
+.detail-product-image{
+    width: 130px;
+}
+
+.detail-product-title{
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.detail-product-line{
+    width: 8%;
+}
+
+.detail-product-subtitle{
+    font-size: 0.8rem;
+    color: #757575;
+    font-weight: 400;
+    padding: 30px;
+}
+
+.detail-product-link{
+    text-decoration: none;
+    color: #757575;
+    font-weight: 500;
+}
+
+
+
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .detail-product-image{
+        width: 100px;
+    }
+
+    .detail-product-title{
+        margin: 10px;
+        font-size: 1.5rem;
+    }
+
+    .detail-product-subtitle{
+        font-size: 1rem;
+    }
+}
